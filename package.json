@@ -1,22 +1,21 @@
 {
-  "name": "m-minkov.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "portfoliowebsite",
+  "version": "0.0.0",
   "scripts": {
-    "start": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.62.0",
-    "vite": "^4.3.2"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.7",
-    "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.4"
+    "@mdi/font": "7.0.96",
+    "roboto-fontface": "*",
+    "vue": "^3.2.0",
+    "vuetify": "^3.0.0",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "vite": "^4.2.0",
+    "vite-plugin-vuetify": "^1.0.0"
   }
 }
