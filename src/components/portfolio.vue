@@ -7,7 +7,7 @@
     <template v-slot:append>
       <v-btn icon="mdi-github" href="https://github.com/M-Minkov"></v-btn>
       <v-btn icon="mdi-email"></v-btn>
-      <v-btn>Source Code</v-btn>
+      <v-btn href="https://github.com/M-Minkov/M-Minkov.github.io">Source Code</v-btn>
     </template>
   </v-app-bar>
 
