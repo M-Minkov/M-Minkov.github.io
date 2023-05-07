@@ -3,32 +3,57 @@
 <template>
     <v-hover v-slot="{ isHovering, props }">
         <v-card class="ma-auto"  v-bind="props" hover>
-          <v-img cover src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
+          <v-img cover src='https://cdn.vuetifyjs.com/images/cards/docks.jpg'>
           </v-img>
           <v-overlay
             :model-value="isHovering"
             contained
-            scrim="#036358"
-            class="align-center justify-center"
+            scrim="#FFFFFF"
+            transition="scale-transition"
+            close-delay=1000
+            class="fill-height"
           >
-            <v-card-title>
-              {{ title }}
-            </v-card-title>
-            <v-card-subtitle>
-              {{ description }}
-            </v-card-subtitle>
+          <v-container class="d-flex flex-column align-center align-self-center justify-center fill-height">
+            <p class="custom_title">{{ title }}</p>
+            <p class="custom_subtitle">{{ description }}</p>
             <v-spacer></v-spacer>
-          <v-btn variant="flat">See more info</v-btn>
+            <v-btn variant="flat">See more info</v-btn>
+          </v-container>
+
           </v-overlay>
         </v-card>
       </v-hover>
 </template>
 
+<style>
+.custom_overlay {
+  background-color: #ffffffb8;
+}
+
+.custom_title {
+  background-color: #ffffff57;
+  padding: 10px;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.custom_subtitle {
+  background-color: #ffffff57;
+  padding: 3px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: normal;
+  max-width: 50%;
+}
+
+</style>
+
 <script setup>
     import { ref } from 'vue'
 
     const title = ref('Project Title');
-    const description = ref('Project Description');
-    const image = ref('https://cdn.vuetifyjs.com/images/cards/docks.jpg');
+    const description = ref('made up description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.');
+    const image = 'https://cdn.vuetifyjs.com/images/cards/docks.jpg';
     
 </script>
