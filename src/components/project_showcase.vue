@@ -3,7 +3,8 @@
 <template>
     <v-hover v-slot="{ isHovering, props }">
         <v-card class="ma-auto"  v-bind="props" hover>
-          <v-img cover src='https://cdn.vuetifyjs.com/images/cards/docks.jpg'>
+          <v-img cover
+          :src="isHovering ? imageURL2 : imageURL1">
           </v-img>
           <v-overlay
             :model-value="isHovering"
@@ -50,10 +51,14 @@
 </style>
 
 <script setup>
-    import { ref } from 'vue'
+    import { computed } from 'vue';
+import { ref } from 'vue'
 
     const title = ref('Project Title');
     const description = ref('made up description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.');
-    const image = 'https://cdn.vuetifyjs.com/images/cards/docks.jpg';
+    // const imageURL1 = ref('https://cdn.vuetifyjs.com/images/cards/docks.jpg');
+    const imageURL1 = ref('./barchart.PNG');
+    const imageURL2 = ref('https://cdn.dribbble.com/users/80960/screenshots/1388364/shot5.gif');
+    const overlay = ref(true)
     
 </script>

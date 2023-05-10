@@ -26,18 +26,6 @@
     <v-col v-for="n in 4" :key="n" cols="4">
       <showcaseCard />
     </v-col>
-    <v-col cols="4">
-      <showcaseCard />
-    </v-col>
-    <v-col cols="4">
-      <showcaseCard />
-    </v-col>
-    <v-col cols="4">
-      <showcaseCard />
-    </v-col>
-    <v-col cols="4">
-      <showcaseCard />
-    </v-col>
   </v-row>
 </template>
   
@@ -45,7 +33,5 @@
     import { ref } from 'vue'
     import showcaseCard from '@/components/project_showcase.vue'
 
-    // ref only used for reactive elements, possibly changing
-    const overlay = ref(true)
   </script>
   
