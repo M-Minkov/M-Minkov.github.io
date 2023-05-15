@@ -23,15 +23,45 @@
 
   <v-row>
     <!-- for loop -->
-    <v-col v-for="n in 4" :key="n" cols="4">
-      <showcaseCard />
+    <v-col v-for="(project, index) in projectsList" :key="index" cols="4">
+      <showcaseCard v-bind="project"/>
     </v-col>
   </v-row>
 </template>
   
   <script setup>
-    import { ref } from 'vue'
-    import showcaseCard from '@/components/project_showcase.vue'
+    import { ref, reactive, computed } from 'vue'
+    import showcaseCard from '@/components/showcaseCard.vue'
+    import Card from '@/assets/js_classes/cardclass.js'
+
+    const projectsList = [
+      new Card(
+        'TradeMe Web Scraper',
+        'Gathers data of rental properties off TradeMe.co.nz, and puts them into a nicely formatted CSV file.',
+        './barchart.PNG',
+        "./barchart.gif",
+        "https://github.com/M-Minkov/RentalScraper"
+      ),
+      new Card(
+        'Fractal Image Generator',
+        'Generative recursion is used to generate a fractal based on the Julia Set of a complex number. The ' +
+        'more recursions done, the more detailed the fractal becomes. Give it 2 complex numbers, and it will generate ' +
+        'as many fractals as you want in-between the numbers, and then squish the images together into a GIF or MP4. ' +
+        'The frames per second, amount of frames, and quality of the image can all be changed.',
+        './fractal.PNG',
+        "https://raw.githubusercontent.com/M-Minkov/Fractal-Image-Generator/main/julia.gif"
+      ),
+      new Card(
+        'Force Directed Graph',
+        'A force directed graph, with nodes that can be dragged around. The nodes are countries, and each country is ' +
+        'connected by an edge, if they share a border/edge in real life. Written in vanilla Javascript.',
+        './forcedDirected.PNG',
+        "./forcedDirected.PNG",
+        "https://github.com/M-Minkov/Javascript-Force-Directed-Graph"
+      ),
+    ];
+
+    console.log(projectsList[0].description);
 
   </script>
   

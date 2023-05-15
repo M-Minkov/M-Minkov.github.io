@@ -4,21 +4,21 @@
     <v-hover v-slot="{ isHovering, props }">
         <v-card class="ma-auto"  v-bind="props" hover>
           <v-img cover
-          :src="isHovering ? imageURL2 : imageURL1">
+          :src="isHovering ? gifFile : pngFile"  >
           </v-img>
           <v-overlay
             :model-value="isHovering"
             contained
-            scrim="#FFFFFF"
+            scrim="#000000"
             transition="scale-transition"
-            close-delay=1000
+            close-delay=10
             class="fill-height"
           >
           <v-container class="d-flex flex-column align-center align-self-center justify-center fill-height">
             <p class="custom_title">{{ title }}</p>
             <p class="custom_subtitle">{{ description }}</p>
             <v-spacer></v-spacer>
-            <v-btn variant="flat">See more info</v-btn>
+            <v-btn icon="mdi-github" :href="sourceURL"></v-btn>
           </v-container>
 
           </v-overlay>
@@ -28,11 +28,11 @@
 
 <style>
 .custom_overlay {
-  background-color: #ffffffb8;
+  background-color: #ffffffe6;
 }
 
 .custom_title {
-  background-color: #ffffff57;
+  background-color: #ffffffa1;
   padding: 10px;
   display: inline-block;
   font-size: 1.5rem;
@@ -40,7 +40,7 @@
 }
 
 .custom_subtitle {
-  background-color: #ffffff57;
+  background-color: #ffffffa1;
   padding: 3px;
   display: inline-block;
   font-size: 1rem;
@@ -51,14 +51,17 @@
 </style>
 
 <script setup>
-    import { computed } from 'vue';
-import { ref } from 'vue'
+  import { ref, reactive, computed } from 'vue'
+  import Card from '@/assets/js_classes/cardclass.js'
 
-    const title = ref('Project Title');
+  const props = defineProps(new Card())
+
+ /*   const title = ref('Project Title');
     const description = ref('made up description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.');
-    // const imageURL1 = ref('https://cdn.vuetifyjs.com/images/cards/docks.jpg');
-    const imageURL1 = ref('./barchart.PNG');
-    const imageURL2 = ref('https://cdn.dribbble.com/users/80960/screenshots/1388364/shot5.gif');
-    const overlay = ref(true)
+    const pngFile = ref('./barchart.PNG');
+    const gifFile = ref('https://cdn.dribbble.com/users/80960/screenshots/1388364/shot5.gif');
+    const overlay = ref(true) */
+
+
     
 </script>
