@@ -6,7 +6,6 @@
   <v-app-bar elevation="4" scroll-behavior="hide" scroll-threshold=10>
     <template v-slot:append>
       <v-btn icon="mdi-github" href="https://github.com/M-Minkov"></v-btn>
-      <v-btn icon="mdi-email"></v-btn>
       <v-btn href="https://github.com/M-Minkov/M-Minkov.github.io">Source Code</v-btn>
     </template>
   </v-app-bar>
@@ -49,7 +48,8 @@
         'as many fractals as you want in-between the numbers, and then squish the images together into a GIF or MP4. ' +
         'The frames per second, amount of frames, and quality of the image can all be changed.',
         './fractal.PNG',
-        "https://raw.githubusercontent.com/M-Minkov/Fractal-Image-Generator/main/julia.gif"
+        "https://raw.githubusercontent.com/M-Minkov/Fractal-Image-Generator/main/julia.gif",
+        "https://github.com/M-Minkov/Fractal-Image-Generator"
       ),
       new Card(
         'Force Directed Graph',
