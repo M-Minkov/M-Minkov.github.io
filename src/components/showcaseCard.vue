@@ -18,7 +18,9 @@
             <p class="custom_title">{{ title }}</p>
             <p class="custom_subtitle">{{ description }}</p>
             <v-spacer></v-spacer>
-            <v-btn icon="mdi-github" :href="sourceURL"></v-btn>
+            <v-btn icon="mdi-github" :href="sourceURL" style="margin: 10px;"></v-btn>
+            <!-- add button if buildURL exists and add a bit of space between the buttons with inbuilt css -->
+            <v-btn v-if="buildURL" :href="buildURL" style="margin: 10px;">View Build</v-btn>
           </v-container>
 
           </v-overlay>

@@ -57,7 +57,8 @@
         'connected by an edge, if they share a border/edge in real life. Written in vanilla Javascript.',
         './forcedDirected.PNG',
         "./forcedDirected.PNG",
-        "https://github.com/M-Minkov/Javascript-Force-Directed-Graph"
+        "https://github.com/M-Minkov/Javascript-Force-Directed-Graph",
+        "https://m-minkov.github.io/Javascript-Force-Directed-Graph/"
       ),
     ];
 
