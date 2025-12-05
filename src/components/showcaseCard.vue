@@ -17,7 +17,7 @@
         :model-value="isHovering"
         contained
         scrim="#000000"
-        opacity="0.85"
+        opacity="0.4"
         transition="scale-transition"
         class="fill-height overlay-container"
       >
@@ -83,10 +83,12 @@
 .card-hovered {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
   transform: translateY(-8px);
+  background: #f9fafb;
 }
 
 .card-image {
   transition: all 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .overlay-container {
