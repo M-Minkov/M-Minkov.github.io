@@ -148,12 +148,6 @@ const projectsList = projects
   }
 }
 
-.footer-section {
-  background: transparent;
-  padding: 24px 16px 48px;
-  color: #5c6f92;
-}
-
 @media (min-width: 1280px) {
   .projects-section {
     max-width: 1280px;

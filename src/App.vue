@@ -1,11 +1,7 @@
 <template>
-  <v-app>
-    <v-main>
-      <portfolio />
-    </v-main>
-  </v-app>
+  <PortfolioView />
 </template>
 
 <script setup>
-  import portfolio from '@/components/portfolio.vue'
+import PortfolioView from '@/components/PortfolioView.vue'
 </script>
